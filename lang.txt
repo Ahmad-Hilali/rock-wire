@@ -1,0 +1,1 @@
+$lang['should_delete_cases'] = "Should Delete all cases first";

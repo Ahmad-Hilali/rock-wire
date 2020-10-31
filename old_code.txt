@@ -1,0 +1,88 @@
+ //change english name
+        /*$(document).on("click",".typeahead a",function(){
+            var messages={message:"processing",type:"warning",icon:"spinner fa-spin"};
+            show_alert(messages);
+
+            var self=$(this);
+            var name=self.parent().parent().prev();
+            if(name.attr("name")=="english_name" || name.attr("name")=="arabic_name" || name.attr("name")=="father_name") {
+                var info = {};
+                info.url = "/Get_name";
+                info.data = {"field": name.attr("name"), "value": name.val()};
+                var promise = send_ajax(info);
+                promise.success(function (data) {
+                    {
+                        $("div[data-notify]").remove();
+                        if(data.data!=0){
+                            var messages={message:"One person found"};
+                            show_alert(messages);
+
+                            $("div.id").text(data.data[0].id);
+                            //fill values
+                            $("input[name=arabic_name]").val(data.data[0].arabic_name);
+                            $("input[name=english_name]").val(data.data[0].english_name);
+                            $("input[name=father_name]").val(data.data[0].father_name);
+                            $("select[name=gender_id]").val(data.data[0].gender_id).trigger('change');
+                            $("input[name=birth_date]").val(data.data[0].birth_date);
+                            $("input[name=age]").val(data.data[0].age);
+                            $("input[name=national_number]").val(data.data[0].national_number);
+                            $("input[name=family_number]").val(data.data[0].family_number);
+                            $("select[name=marital_status_id]").val(data.data[0].marital_status_id).trigger('change');
+                            $("select[name=housing_condition_id]").val(data.data[0].housing_condition_id).trigger('change');
+
+                            //checkbox
+                            if(data.data[0].is_displaced=="0")
+                               var is_displaced=false;
+                            else
+                               var is_displaced=true;
+                            $('input[name=is_displaced]').prop('checked', is_displaced);
+
+                            if(data.data[0].is_rented=="0")
+                               var is_rented=false;
+                            else
+                               var is_rented=true;
+                            $('input[name=is_rented]').prop('checked', true);
+
+                            if(data.data[0].is_homeless=="0")
+                               var is_homeless=false;
+                            else
+                               var is_homeless=true;
+                            $('input[name=is_homeless]').prop('checked', true);
+
+                            if(data.data[0].is_sharing_with_relatives=="0")
+                               var is_sharing_with_relatives=false;
+                            else
+                               var is_sharing_with_relatives=true;
+                            $('input[name=is_sharing_with_relatives]').prop('checked', true);
+
+                            $('.switchery').trigger('click');
+                            //End checkbox
+
+                            $("select[name=original_province_id]").val(data.data[0].original_province_id).trigger('change');
+                            $("select[name=current_address_id]").val(data.data[0].current_address_id).trigger('change');
+                            $("input[name=phone_number]").val(data.data[0].phone_number);
+                        }
+                        else{
+                            var messages={message:"No person Found",type:"danger",icon:"warning"};
+                            show_alert(messages);
+                        }
+                    }
+                });
+            }
+        });*/
+
+
+        //select
+
+
+        SELECT DISTINCT b.arabic_name,s.service_name,bs.provider_id from bw_beneficiary b,bw_cases c,bw_beneficiary_services bs,bw_projects_services s,bw_projects pro,bw_template_services t,bw_services_provider prov
+
+        where b.id=c.beneficiary_id
+
+        and bs.case_id=c.id
+        and bs.provider_id=prov.id
+        and bs.service_id=s.id
+        and pro.id=s.project_id
+        and s.template_id=t.id
+
+        and c.id=11

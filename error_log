@@ -1,0 +1,6 @@
+[13-Mar-2016 17:03:44 Asia/Damascus] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/bwire/public_html/new_emp_sya/application/modules/Main_core/controllers/Main_core.php on line 19
+[13-Mar-2016 17:04:31 Asia/Damascus] PHP Parse error:  syntax error, unexpected '[' in /home/bwire/public_html/new_emp_sya/application/modules/Main_core/controllers/Main_core.php on line 21
+[13-Mar-2016 17:04:44 Asia/Damascus] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/bwire/public_html/new_emp_sya/application/modules/Main_core/controllers/Main_core.php on line 19
+[14-Mar-2016 01:13:26 Asia/Damascus] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/bwire/public_html/new_emp_sya/application/modules/Main_core/controllers/Main_core.php on line 19
+[14-Mar-2016 01:16:27 Asia/Damascus] PHP Parse error:  syntax error, unexpected '[' in /home/bwire/public_html/new_emp_sya/application/modules/Main_core/controllers/Main_core.php on line 22
+[12-Apr-2016 00:15:36 Asia/Damascus] PHP Fatal error:  Cannot access empty property in /home/bwire/public_html/new_emp_sya/application/third_party/MX/Loader.php on line 165
